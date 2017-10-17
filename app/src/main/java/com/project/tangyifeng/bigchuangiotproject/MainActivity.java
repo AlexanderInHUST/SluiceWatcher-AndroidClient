@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.project.tangyifeng.bigchuangiotproject.mysql.MySqlColumnValue;
+import com.project.tangyifeng.bigchuangiotproject.mysql.MySqlConst;
 import com.project.tangyifeng.bigchuangiotproject.mysql.MySqlHandler;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 MySqlHandler mySqlHandler = new MySqlHandler();
-                ArrayList<HashMap<String, MySqlColumnValue>> list =  mySqlHandler.query("select * from cm_customer");
+                ArrayList<HashMap<String, MySqlColumnValue>> list =  mySqlHandler.query(MySqlConst.QUERY_CUSTOMER);
                 System.out.println(list.get(0).keySet().size());
                 mySqlHandler.close();
             }

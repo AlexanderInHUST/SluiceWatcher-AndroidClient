@@ -8,9 +8,11 @@ package com.project.tangyifeng.bigchuangiotproject.mysql;
 
 public class MySqlConst {
 
-    protected static final String DB_URL = "jdbc:mysql://112.74.108.250:3306/newalgdb?useUnicode=true&characterEncoding=UTF-8";
+    protected static final String DB_URL = "jdbc:mysql://112.74.108.250:3306/algdb?useUnicode=true&characterEncoding=UTF-8";
     protected static final String USER = "root";
     protected static final String PASSWORD = "hust123456";
+
+    public static final String QUERY_CUSTOMER = "select * from cm_customer";
 
 
 }
